@@ -9,7 +9,7 @@ const CustomerDetails = () => {
     useEffect(() => {
         const fetchCustomer = async () => {
             try {
-                const response = await fetch(`/api/customers/${customerId}`);
+                const response = await fetch(`http://127.0.0.1:5000/api/customers/${customerId}`);
                 const data = await response.json();
                 setCustomer(data);
             }   catch (error) {
@@ -21,7 +21,7 @@ const CustomerDetails = () => {
 
     const handleDelete = async () => {
         try {
-            await fetch(`/api/customers/${customerId}`, {method: 'DELETE' });
+            await fetch(`http://127.0.0.1:5000/api/customers/${customerId}`, {method: 'DELETE' });
             alert('Customer deleted successfully');
         }   catch (error) {
             alert('Error deleting customer');

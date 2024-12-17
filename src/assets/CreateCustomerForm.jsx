@@ -9,7 +9,7 @@ const CreateCustomerForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await fetch('/api/customers', {
+            await fetch('http://127.0.0.1:5000/api/customers', {
                 method: 'POST',
                 body: JSON.stringify({ name, email, phone }),
                 headers: { 'Content-Type': 'application/json' },

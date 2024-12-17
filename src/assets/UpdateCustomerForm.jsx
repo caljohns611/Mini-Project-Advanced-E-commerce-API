@@ -18,7 +18,7 @@ const UpdateCustomerForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`/api/customers/${customerId}`, {
+      await fetch(`http://127.0.0.1:5000/api/customers/${customerId}`, {
         method: 'PUT',
         body: JSON.stringify(customer),
         headers: { 'Content-Type': 'application/json' },
